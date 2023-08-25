@@ -1,0 +1,41 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
+
+:root {
+    --primary-color: #101e51;
+    --secondary-color: white;
+    --primary-text-color: white;
+    --secondary-text-color: #101e51;
+}
+  
+.shawn-footer-button {
+    background-color: var(--primary-color) ;
+    color: var(--primary-text-color);
+    border-color: var(--primary-color);
+  }
+  .shawn-footer-button:hover {
+    
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+  }
+
+.shawn-primary-text-color {
+    color: var(--primary-text-color);
+}
+
+
+.shawn-secondary-text-color {
+    color: var(--secondary-text-color);
+}
+
+.shawn-primary-bg-color {
+  background-color: var(--primary-color);
+}
+
+
+.shawn-secondary-bg-color {
+  background-color: var(--secondary-color);
+}
