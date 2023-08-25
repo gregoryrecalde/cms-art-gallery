@@ -7,10 +7,10 @@ export default function Layout({ preview, children }) {
   return (
     <>
       <Meta />
-      <div className="min-h-screen" style={{display: 'inline-grid'}}>
+      <div className="min-h-screen" style={{display: 'inline-grid', overflowX: 'hidden'}}>
         {/* <Alert preview={preview} /> */}
         <main>{children}</main>
-        <FloatingMenu /> {/* Agrega el menú flotante */}
+        <FloatingMenu />
       </div>
       <Footer />
     </>

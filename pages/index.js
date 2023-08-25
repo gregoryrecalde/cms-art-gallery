@@ -1,5 +1,4 @@
 import Container from '../components/container'
-import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
 import Intro from '../components/intro'
 import Layout from '../components/layout'
@@ -8,6 +7,10 @@ import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
 import ResponsiveVideo from '../components/responsive-video'
 
+function handleResize() {
+  // Actualiza el diseño de la página en respuesta a cambios de tamaño de la ventana
+  // Puedes poner aquí cualquier lógica de actualización que necesites
+}
 export default function Index({ preview, allPosts }) {
   const heroPost = allPosts[0]
   const morePosts = allPosts.slice(1)

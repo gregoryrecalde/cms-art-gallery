@@ -4,6 +4,15 @@
 /* purgecss end ignore */
 @tailwind utilities;
 
+/* globals.css */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  margin: 0 auto; 
+}
+
+
 :root {
     --primary-color: #101e51;
     --secondary-color: white;
