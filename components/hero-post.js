@@ -51,6 +51,7 @@ export default function HeroPost({
   };
 
   const contentAlignmentClass = coverAlignment === 'left' ? 'md:flex-row-reverse' : 'md:flex-row';
+  const spanAlignment = coverAlignment === 'left' ? 'right-0 ' : 'left-0 ';
   return (
     <motion.div
         className="md:w-1/1"
@@ -63,8 +64,15 @@ export default function HeroPost({
     <section>
       <div className={`md:flex ${contentAlignmentClass}`}>
         <div className="md:w-1/2">
-          <h3 className="shawn-secondary-text-color  mb-4 text-4xl lg:text-6xl leading-tight">
+          <h3 className="shawn-secondary-text-color   mb-4 text-4xl lg:text-6xl leading-tight">
             {title}
+            <span className={`${spanAlignment} absolute md:w-1/2 h-1 bg-gradient-to-r from-white via-blue-950   to-white opacity-0 transition-opacity`}></span>
+            <style jsx>{`
+                    h3:hover span {
+                    opacity: 1;
+                    transition: opacity 0.3s ease-in-out;
+                    }
+                `}</style>
           </h3>
           <div className={markdownStyles['markdown']}>
             {documentToReactComponents(

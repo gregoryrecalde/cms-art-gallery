@@ -7,6 +7,7 @@ import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
 import ResponsiveVideo from '../components/responsive-video'
 
+
 function handleResize() {
   // Actualiza el diseño de la página en respuesta a cambios de tamaño de la ventana
   // Puedes poner aquí cualquier lógica de actualización que necesites
@@ -16,6 +17,7 @@ export default function Index({ preview, allPosts }) {
   const morePosts = allPosts.slice(1)
   const videoUrl = 'https://richardmacdonald.com/wp-content/uploads/2022/12/RM-Intro-042822-mp4.mp4'; // Reemplaza con la URL de tu video
 
+  
   return (
     <>
       <Layout preview={preview}>

@@ -7,6 +7,8 @@ const FloatingMenu = () => {
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
+    const newCursorColor = isModalOpen ? 'black' : 'white';
+    document.documentElement.style.setProperty('--cursor-color', newCursorColor);
   };
 
   useEffect(() => {
@@ -64,7 +66,7 @@ const FloatingMenu = () => {
             <ul className="space-y-2 text-lg">
               <li className="p-2 block">
                 <Link href="/" passHref>
-                  <div className="cursor-pointer shawn-primary-text-color">Home</div>
+                  <div className="shawn-primary-text-color">Home</div>
                   
                 </Link>
                 <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-950 via-white-500  to-white opacity-0 transition-opacity"></span>
@@ -77,7 +79,7 @@ const FloatingMenu = () => {
               </li>
               <li className="p-2 block">
                 <Link href="/allegories" passHref>
-                  <div className="cursor-pointer  shawn-primary-text-color">Allegories</div>
+                  <div className="shawn-primary-text-color">Allegories</div>
                 </Link>
                 <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r  from-blue-950 via-white-500 to-white  opacity-0 transition-opacity"></span>
                 <style jsx>{`
@@ -89,7 +91,7 @@ const FloatingMenu = () => {
               </li>
               <li className="p-2 block">
                 <Link href="/drawings" passHref>
-                  <div className="cursor-pointer  shawn-primary-text-color">Drawings</div>
+                  <div className="shawn-primary-text-color">Drawings</div>
                 </Link>
                 <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-950 via-white-500 to-white opacity-0 transition-opacity"></span>
                 <style jsx>{`
@@ -101,7 +103,7 @@ const FloatingMenu = () => {
               </li>
               <li className="p-2 block">
                 <Link href="/press" passHref>
-                  <div className="cursor-pointer  shawn-primary-text-color">Press</div>
+                  <div className="shawn-primary-text-color">Press</div>
                 </Link>
                 <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-950 via-white-500  to-white opacity-0 transition-opacity"></span>
                 <style jsx>{`
@@ -113,7 +115,7 @@ const FloatingMenu = () => {
               </li>
               <li className="p-2 block">
                 <Link href="/about" passHref>
-                  <div className="cursor-pointer  shawn-primary-text-color">About</div>
+                  <div className="shawn-primary-text-color">About</div>
                 </Link>
                 <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r  from-blue-950 via-white-500 to-white opacity-0 transition-opacity"></span>
                 <style jsx>{`
@@ -125,7 +127,7 @@ const FloatingMenu = () => {
               </li>
               <li className="p-2 block">
                 <Link href="/contact" passHref>
-                  <div className="cursor-pointer shawn-primary-text-color">Contact</div>
+                  <div className="shawn-primary-text-color">Contact</div>
                 </Link>
                 <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-950 via-white-500 to-white opacity-0 transition-opacity"></span>
                 <style jsx>{`

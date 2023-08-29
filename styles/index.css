@@ -14,10 +14,13 @@ body {
 
 
 :root {
-    --primary-color: #101e51;
+    /* --primary-color: #101e51; */
+    --primary-color: #black;
     --secondary-color: white;
     --primary-text-color: white;
-    --secondary-text-color: #101e51;
+    /* --secondary-text-color: #101e51; */
+    --secondary-text-color: #black;
+    --cursor-color: black;
 }
   
 .shawn-footer-button {
@@ -48,3 +51,9 @@ body {
 .shawn-secondary-bg-color {
   background-color: var(--secondary-color);
 }
+
+
+
+
+
+
