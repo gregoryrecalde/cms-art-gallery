@@ -64,7 +64,7 @@ export default function HeroPost({
     <section>
       <div className={`md:flex ${contentAlignmentClass}`}>
         <div className="md:w-1/2">
-          <h3 className="shawn-secondary-text-color   mb-4 text-4xl lg:text-6xl leading-tight">
+          <h3 className="shawn-secondary-text-color   mb-4 text-4xl lg:text-6xl leading-tight" style={{ fontSize: '80px' }}>
             {title}
             <span className={`${spanAlignment} absolute md:w-1/2 h-1 bg-gradient-to-r from-white via-blue-950   to-white opacity-0 transition-opacity`}></span>
             <style jsx>{`
@@ -81,7 +81,7 @@ export default function HeroPost({
             )}
           </div>
           <p className="shawn-secondary-text-color text-lg leading-relaxed mb-4">{excerpt}</p>
-          <IoIosArrowDown className="mr-1 shawn-secondary-text-color " style={{ fontSize: '64px' }} />
+          <IoIosArrowDown className="mr-1 shawn-secondary-text-color " style={{ fontSize: '64px', marginBottom: '10px' }} />
         </div>
         <div className="md:w-1/2">
           <CoverImage title={title} slug={slug} url={coverImage.url} alignment={coverAlignment}/>

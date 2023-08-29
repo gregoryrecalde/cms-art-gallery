@@ -15,12 +15,29 @@ body {
 
 :root {
     /* --primary-color: #101e51; */
-    --primary-color: #black;
+    --primary-color: black;
     --secondary-color: white;
     --primary-text-color: white;
     /* --secondary-text-color: #101e51; */
-    --secondary-text-color: #black;
+    --secondary-text-color: black;
     --cursor-color: black;
+}
+
+.react-photo-gallery--gallery div {
+  justify-content: center;
+}
+.react-photo-gallery--gallery div img {
+  
+  transform: translateY(0);
+  transition: transform 0.2s;
+  max-width: 15vw !important;
+  margin-bottom: 30px !important;
+}
+
+.react-photo-gallery--gallery div img:hover
+{
+  transform: translateY(-20px);
+  transition: transform 0.2s;
 }
   
 .shawn-footer-button {
@@ -53,6 +70,80 @@ body {
 }
 
 
+/* Estilos para el contenedor de botones */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 40vh; /* La tercera parte de la altura de la pantalla */
+  font-size: var(--secondary-text-color); /* Establece el color de la fuente */
+}
+
+/* Estilos para los botones */
+.left-button,
+.right-button {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  height: 100%; /* Ocupa toda la altura del contenedor */
+  width: 40vw; /* Ocupa toda la altura del contenedor */
+  justify-content: center;
+  text-align: center;
+}
+.main-option  {
+  
+  font-size: 80px !important;
+}
+@media (max-width: 1000px) {
+
+  .main-option  {
+      font-size: 20px !important;
+  } 
+  .button-container hr {
+    align-self: flex-start;
+    margin-top: 30px !important;
+    width: 2px !important;
+  }
+  
+}
+
+/* Estilo específico para el botón izquierdo */
+.left-button {
+  margin-right: 5px;
+  margin-top: 150px;
+  transform: scale(1);
+  transition: transform 0.2s;
+}
+
+/* Estilo específico para el botón derecho */
+.right-button {
+  margin-left: 5px;
+  margin-top: 150px;
+  transform: scale(1);
+  transition: transform 0.2s;
+}
+
+.left-button:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s;
+}
+
+.right-button:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s;
+}
+
+/* Estilos para la línea separadora */
+.button-container hr {
+  width: 4px;
+  height: 50%;
+  background-color: var(--primary-color);
+  vertical-align: top;
+  margin-top: 20px;
+  align-self: flex-start;
+}
 
 
 

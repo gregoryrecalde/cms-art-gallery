@@ -20,10 +20,12 @@ export default function Layout({ preview, children }) {
       outerAlpha={0}
       hasBlendMode={true}
       innerStyle={{
-        backgroundColor: 'var(--cursor-color)'
+        backgroundColor: 'var(--cursor-color)',
+        zIndex: 9999
       }}
       outerStyle={{
-        border: '3px solid var(--cursor-color)'
+        border: '3px solid var(--cursor-color)',
+        zIndex: 9999,
       }}
     />
       <Meta />

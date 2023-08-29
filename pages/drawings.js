@@ -8,6 +8,7 @@ import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
 import ResponsiveVideo from '../components/responsive-video'
 
+
 export default function Allegories({ preview, allPosts }) {
   const heroPost = allPosts[0]
   const morePosts = allPosts.slice(1)

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const FloatingMenu = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -10,7 +11,7 @@ const FloatingMenu = () => {
     const newCursorColor = isModalOpen ? 'black' : 'white';
     document.documentElement.style.setProperty('--cursor-color', newCursorColor);
   };
-
+  const router = useRouter();
   useEffect(() => {
     function handleScroll() {
       // Obtén el ancho de la ventana del navegador
@@ -25,6 +26,17 @@ const FloatingMenu = () => {
       } else {
         setTextColor('shawn-primary-text-color');
       }
+
+      const handleRouteChange = () => {
+        document.documentElement.style.setProperty('--cursor-color', 'black');
+      };
+  
+      router.events.on('routeChangeComplete', handleRouteChange);
+  
+      // Limpia el evento al desmontar el componente
+      return () => {
+        router.events.off('routeChangeComplete', handleRouteChange);
+      };
     }
 
     // Agregar el evento de desplazamiento
