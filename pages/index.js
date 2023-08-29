@@ -46,7 +46,7 @@ export default function Index({ preview, allPosts }) {
   const closeLightbox = () => {
     setCurrentImage(0);
     setViewerIsOpen(false);
-    const newCursorColor = 'black';
+    const newCursorColor = '#101e51';
     document.documentElement.style.setProperty('--cursor-color', newCursorColor);
   };
 

@@ -8,7 +8,7 @@ const FloatingMenu = () => {
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
-    const newCursorColor = isModalOpen ? 'black' : 'white';
+    const newCursorColor = isModalOpen ? '#101e51' : 'white';
     document.documentElement.style.setProperty('--cursor-color', newCursorColor);
   };
   const router = useRouter();

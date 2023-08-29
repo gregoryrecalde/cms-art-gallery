@@ -14,13 +14,13 @@ body {
 
 
 :root {
-    /* --primary-color: #101e51; */
-    --primary-color: black;
+    --primary-color: #101e51;
+    /* --primary-color: black; */
     --secondary-color: white;
     --primary-text-color: white;
-    /* --secondary-text-color: #101e51; */
-    --secondary-text-color: black;
-    --cursor-color: black;
+    --secondary-text-color: #101e51;
+    /* --secondary-text-color: black; */
+    --cursor-color: #101e51;
 }
 
 .react-photo-gallery--gallery div {
