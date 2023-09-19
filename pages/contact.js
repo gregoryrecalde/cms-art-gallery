@@ -59,7 +59,7 @@ export default function Contact() {
     <>
     <Layout cursorInnerSize={8} cursorOuterSize={35} usePrimaryColorValue={false}>
         <Head>
-          <title>{`${CMS_NAME} - About`}</title>
+          <title>{`${CMS_NAME} - Contact`}</title>
         </Head>
         <div style={containerStyle}>
         </div>
@@ -82,9 +82,20 @@ export default function Contact() {
             
             <div>
               
-            <div className="md:flex justify-center pb-6"  >
+            <div className="md:flex pb-6"  >
                 <h2 className="text-2xl font-bold ">Contact</h2>
             </div>
+            
+            <div className="md:flex font-bold"  >
+                <p>For Private Commissions</p>
+            </div>
+            <div className="md:flex"  >
+                <p>Shawn Michael Warren</p>
+            </div>
+            <div className="md:flex mb-5"  >
+                <p>Email: swarrenmedia@gmail.com</p>
+            </div>
+
               <form className="custom-form" onSubmit={handleSubmit}>
                 <div>
                   <label htmlFor="name">Name:</label>
@@ -127,11 +138,25 @@ export default function Contact() {
                 </div>
                 <button type="submit" onClick={showMessage}>Send</button>
               </form>
+
+              
+            <div className="md:flex justify-center pb-6 mt-5"  >
+                <h2 className="text-1xl font-bold ">For available work, please contact:</h2>
+            </div>
               
                 
               <div class="message-container">
                     <p id="confirmation-message">Thank you.</p>
+              </div>
+              <div className='flex'>
+                <div>
+                  <a href="https://www.artsy.net/artist/shawn-michael-warren" target="_blank"> <img src="/artsy_logo.png"  height={'fit-content'} width={300} /></a>
                 </div>
+                
+                <div>
+                  <a href="https://www.33contemporary.com/" target="_blank"> <img src="/contemporary_gallery.png" height={'fit-content'} /></a>
+                </div>
+              </div>
             </div>
 
 

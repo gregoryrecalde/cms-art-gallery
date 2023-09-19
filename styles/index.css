@@ -241,6 +241,7 @@ body {
 
 .custom-form label {
   margin-bottom: 8px;
+  font-weight: bold;
 }
 
 .custom-form input,
