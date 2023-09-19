@@ -5,7 +5,7 @@ import cn from 'classnames'
 export default function CoverImage({ title, url, slug, alignment }) {
   const image = (
     <ContentfulImage
-      width={300}
+      width={500}
       height={200}
       alt={`Cover Image for ${title}`}
       className={cn('shadow-small', {

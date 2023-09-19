@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-const FloatingMenu = () => {
+const FloatingMenu = ({ usePrimaryColor }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [textColor, setTextColor] = useState('shawn-primary-text-color');
-
+  const [textColor, setTextColor] = useState(
+    usePrimaryColor ? 'shawn-primary-text-color' : 'shawn-secondary-text-color'
+  );
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
     const newCursorColor = isModalOpen ? '#101e51' : 'white';
@@ -22,9 +23,9 @@ const FloatingMenu = () => {
 
       // Cambia el color del texto a negro cuando el usuario ha desplazado una cierta cantidad
       if (window.scrollY > scrollThreshold) {
-        setTextColor('shawn-secondary-text-color ');
+        setTextColor(usePrimaryColor ? 'shawn-secondary-text-color' : 'shawn-secondary-text-color');
       } else {
-        setTextColor('shawn-primary-text-color');
+        setTextColor(usePrimaryColor ? 'shawn-primary-text-color' : 'shawn-secondary-text-color');
       }
 
       const handleRouteChange = () => {
@@ -59,10 +60,12 @@ const FloatingMenu = () => {
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg">
           <div className="bg-transparent p-4 rounded-lg">
-            <button
-                onClick={toggleModal}
-                className="absolute top-2 right-2 shawn-primary-text-color text-6xl hover:text-white transition-colors duration-300"
-                >
+          <button
+            onClick={toggleModal}
+            className={`${
+              !usePrimaryColor ? 'shawn-primary-text-color' : textColor
+            } hover:text-white transition-colors duration-300 text-5xl absolute top-2 right-5`}
+          >
                 x
             </button>
             <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter  shawn-primary-text-color leading-tight mb-20 mt-8 relative">
@@ -75,6 +78,7 @@ const FloatingMenu = () => {
     }
   `}</style>
 </h2>
+
             <ul className="space-y-2 text-lg">
               <li className="p-2 block">
                 <Link href="/" passHref>
@@ -152,6 +156,7 @@ const FloatingMenu = () => {
             </ul>
           </div>
         </div>
+        
       )}
     </div>
   );

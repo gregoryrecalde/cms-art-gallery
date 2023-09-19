@@ -1,28 +1,38 @@
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
 import Layout from '../components/layout'
 import { getAllAllegoriesForHome, getAllegories } from '../lib/allegories-api'
 import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
 import ResponsiveVideo from '../components/responsive-video'
-
+import IntroNoVideo from '../components/intro-no-video'
+import { render } from "react-dom";
+import { useEffect} from "react";
 
 export default function Allegories({ preview, allAllegories }) {
   const heroPost = allAllegories[0]
   const morePosts = allAllegories.slice(1)
-  const videoUrl = 'https://richardmacdonald.com/wp-content/uploads/2022/12/RM-Intro-042822-mp4.mp4'; // Reemplaza con la URL de tu video
+  const videoUrl = '/banner.mp4'; // Reemplaza con la URL de tu video
+  const containerStyle = {
+    marginTop: '8rem', // Ajusta el valor del margen superior según tu preferencia
+  };  
+
+  useEffect(() => {
+    const newCursorColor = '#101e51';
+    document.documentElement.style.setProperty('--cursor-color', newCursorColor);
+  }, []);
 
   return (
     <>
-      <Layout preview={preview}>
+    <Layout cursorInnerSize={8} cursorOuterSize={35} usePrimaryColorValue={false}>
         <Head>
           <title>{`${CMS_NAME} - Allegories`}</title>
         </Head>
-        <ResponsiveVideo videoUrl={videoUrl}/>
+        <div style={containerStyle}>
+        </div>
         <Container>
-          <Intro />
+          <IntroNoVideo />
           {allAllegories.map((post, index) => {
             // Calcular el valor de coverAlignment en función del índice
             const coverAlignment = index % 2 === 0 ? 'right' : 'left';

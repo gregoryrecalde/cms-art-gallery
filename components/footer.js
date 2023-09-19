@@ -15,6 +15,9 @@ export default function Footer() {
           <h3 className="shawn-secondary-text-color text-sm lg:text-sm font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
           Copyright ® 2023 | Shawn Michael Warren
           </h3>
+          <div style={{marginBottom: '40px;'}} >
+            <img src="/logo_web.png" />
+          </div>
           <div className="flex flex-col lg:flex-row lg:justify-end  justify-center items-center lg:pl-4 lg:w-1/2">
             <a
               href=""
