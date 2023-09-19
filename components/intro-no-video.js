@@ -9,7 +9,6 @@ export default function IntroNoVideo() {
       <div className="flex items-center">
         <img src="https://drive.google.com/uc?id=1SkLIClwh9azrq_QloyR1m0CL_CX4z5pJ" className="w-12 h-12 mr-2" alt="Logo" />
         <h1 className="text-1xl md:text-1xl font-bold tracking-tighter leading-tight md:pr-8">
-          Warren Art
         </h1>
       </div>
     </section>

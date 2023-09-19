@@ -38,7 +38,7 @@ export default function About() {
             {/* Columna Derecha - Título y Párrafo */}
             <div className="md:col-span-1" >
               <h2 className="text-2xl font-bold mb-4">About the Artist</h2>
-              <p className="text-gray-700">
+              <p className="text-gray-700" style={{textSlign: "justify;"}}>
               Shawn Michael Warren was born in Chicago, IL. He received his BFA at the American Academy of Art in Chicago and also studied at the Florence Academy of Art in Florence, Italy. His work brings attention and awareness to events and individuals (past and present) that have affected and shaped cultures and civilizations throughout the world. His emphasis on narrative, historical subjects is a central feature of his larger viewpoint, which looks at the History of the United States, and the world, via the experiences of BIPOC. Warren often utilizes historic themes or narratives to communicate essential human truths, and initiate uncomfortable conversations surrounding race, sociopolitical subjects, and culture. He seeks to portray people with a grand humanity, rather than simply indicating a figure in a landscape.<br></br>
               <br></br>
 His most notable creation, In a Promised Land . . . , received critical acclaim for bringing life to the tragic history of the Greenwood Community in early 1920s Tulsa, Oklahoma, home to the wealthiest black community in America: “The sublime beauty of Warren’s painting style combined with the absence of blood and gore makes the subject matter accessible, so that people linger and look closely at the scene of destruction and emotional upheaval” (Kate Lewis, in the Rapidian).<br></br><br></br>

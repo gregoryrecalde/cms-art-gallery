@@ -232,8 +232,8 @@ body {
 }
 
 .custom-form {
-  display: flex;
   flex-direction: column;
+  display: flex;
   align-items: left;
   text-align: left;
   color: var(--secondary-text-color); /* Aplicamos el color desde la variable global */
@@ -265,4 +265,36 @@ body {
 
 .custom-form button:hover {
   background-color: #090c33; /* Cambia el color de fondo en el hover si lo deseas */
+}
+
+
+.message-container {
+  display: none;
+  z-index : '9999';
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform-origin: top center;
+}
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+@keyframes slideOutUp {
+  from {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  to {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
 }
